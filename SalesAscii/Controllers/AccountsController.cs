@@ -36,7 +36,7 @@ namespace SalesAscii.Controllers
             return Ok(new ServiceResponse(result));
         }
 
-
+        // validate login data
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginViewModel model)
         {
@@ -53,5 +53,6 @@ namespace SalesAscii.Controllers
 
             return Ok(new ServiceResponse());
         }
+ 
     }
 }
