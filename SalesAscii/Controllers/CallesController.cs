@@ -121,5 +121,12 @@ namespace SalesAscii.Controllers
             var result = await _db.ExecuteQuery("get_the_emp_name", param);
             return Ok(new ServiceResponse(result));
         }
+        [HttpGet]
+        public async Task<IActionResult> GetAllPromotions()
+        {
+            
+            var result = await _db.ExecuteQuery("get_all_promotion");
+            return Ok(new ServiceResponse(result));
+        }
     }
 }
