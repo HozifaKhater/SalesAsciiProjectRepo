@@ -73,5 +73,13 @@ namespace SalesAscii.Controllers
             return Ok(new ServiceResponse());
         }
 
+
+        [HttpGet]
+        public async Task<IActionResult> GetDocSpeciality()
+        {
+            var result = await _db.ExecuteQuery("get_speciality");
+            return Ok(new ServiceResponse(result));
+        }
+
     }
 }
